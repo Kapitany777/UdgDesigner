@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
         {
             var textView = new TextView(this);
 
-            textView.setText(Integer.toString(pow));
+            textView.setText(String.format("%d", pow));
             textView.setTextAppearance(R.style.TextViewPowerOfTwo);
             textView.setGravity(Gravity.CENTER);
 

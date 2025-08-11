@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="UDG Designer App"
+        android:text="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="DATA:"
+        android:text="@string/data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tableLayoutDesigner" />
@@ -73,7 +73,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Calculate" />
+            android:text="@string/calculate" />
 
         <Button
             android:id="@+id/buttonReset"
@@ -84,7 +84,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Reset" />
+            android:text="@string/reset" />
 
         <Button
             android:id="@+id/buttonInvert"
@@ -95,7 +95,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Invert" />
+            android:text="@string/invert" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +117,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Mirror X" />
+            android:text="@string/mirror_x" />
 
         <Button
             android:id="@+id/buttonMirrorY"
@@ -128,7 +128,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Mirror Y" />
+            android:text="@string/mirror_y" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
