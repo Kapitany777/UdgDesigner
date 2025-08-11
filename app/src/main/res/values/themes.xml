@@ -19,4 +19,9 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="ButtonOperation" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:backgroundTint">#0078d7</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
 </resources>
