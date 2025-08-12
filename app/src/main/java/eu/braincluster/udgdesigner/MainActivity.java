@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -36,13 +37,15 @@ public class MainActivity extends AppCompatActivity
 
         udg = new UserDefinedGraphics();
 
-        binding.buttonCalculate.setOnClickListener(v -> {
-            binding.textViewUdgDataList.setText(udg.getUdgDataAsString());
+        binding.buttonReset.setOnClickListener(v -> {
+            showYesNoDialog("Are you sure?", () -> {
+                udg.reset();
+                redraw();
+            });
         });
 
-        binding.buttonReset.setOnClickListener(v -> {
-            udg.reset();
-            redraw();
+        binding.buttonCalculate.setOnClickListener(v -> {
+            binding.textViewUdgDataList.setText(udg.getUdgDataAsString());
         });
 
         binding.buttonInvert.setOnClickListener(v -> {
@@ -164,4 +167,21 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
+    public void showYesNoDialog(String message, Runnable runnable)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder
+                .setTitle("Question")
+                .setMessage(message)
+                .setCancelable(false)
+                .setNegativeButton("No", null)
+                .setPositiveButton("Yes", (dialogInterface, i) -> runnable.run());
+
+        AlertDialog alertDialog = builder.create();
+
+        alertDialog.show();
+    }
+
 }
