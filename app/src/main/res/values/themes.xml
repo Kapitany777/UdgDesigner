@@ -8,20 +8,24 @@
     <style name="Theme.UdgDesigner" parent="Base.Theme.UdgDesigner" />
 
     <style name="TextViewTitle">
-        <item name="android:textColor">#0058b7</item>
+        <item name="android:textColor">@color/udgBlue</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="TextViewPowerOfTwo">
-        <item name="android:textColor">#0058b7</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/udgBlue</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextViewData">
+        <item name="android:textSize">20sp</item>
+    </style>
+
     <style name="ButtonOperation" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:backgroundTint">#0078d7</item>
+        <item name="android:backgroundTint">@color/udgBlue</item>
         <item name="android:textColor">#ffffff</item>
     </style>
 </resources>

@@ -2,9 +2,9 @@
     <string name="app_name">UdgDesigner</string>
     <string name="title">UDG Designer App</string>
     <string name="data">DATA:</string>
-    <string name="calculate">Calculate</string>
     <string name="reset">Reset</string>
     <string name="invert">Invert</string>
     <string name="mirror_x">Mirror X</string>
     <string name="mirror_y">Mirror Y</string>
+    <string name="calc_data">Data</string>
 </resources>

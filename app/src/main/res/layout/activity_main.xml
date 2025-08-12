@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:text="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +33,7 @@
 
     <TextView
         android:id="@+id/textViewUdgData"
+        style="@style/TextViewData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -45,6 +46,7 @@
 
     <TextView
         android:id="@+id/textViewUdgDataList"
+        style="@style/TextViewData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -65,17 +67,6 @@
         app:layout_constraintTop_toBottomOf="@id/textViewUdgDataList">
 
         <Button
-            android:id="@+id/buttonCalculate"
-            style="@style/ButtonOperation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:text="@string/calculate" />
-
-        <Button
             android:id="@+id/buttonReset"
             style="@style/ButtonOperation"
             android:layout_width="0dp"
@@ -85,6 +76,17 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:text="@string/reset" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            style="@style/ButtonOperation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/calc_data" />
 
         <Button
             android:id="@+id/buttonInvert"
