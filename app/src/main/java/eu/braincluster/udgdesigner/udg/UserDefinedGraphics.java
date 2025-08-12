@@ -71,7 +71,10 @@ public class UserDefinedGraphics
 
     public String getUdgDataAsString()
     {
-        return getUdgData().stream().map(String::valueOf).collect(Collectors.joining(", "));
+        return getUdgData()
+                .stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(", "));
     }
 
     public void invert()

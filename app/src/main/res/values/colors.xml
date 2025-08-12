@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="udgBlue">#0078d7</color>
+    <color name="udgGray">#808080</color>
 </resources>

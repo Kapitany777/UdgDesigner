@@ -1,6 +1,5 @@
 package eu.braincluster.udgdesigner;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Button;
@@ -8,6 +7,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import eu.braincluster.udgdesigner.databinding.ActivityMainBinding;
 import eu.braincluster.udgdesigner.udg.UserDefinedGraphics;
@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity
     private UserDefinedGraphics udg;
     private Button[][] buttons;
 
+    private int colorSet;
+    private int colorUnset;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        readColors();
 
         createPowersOfTwo();
         createButtons();
@@ -54,6 +59,12 @@ public class MainActivity extends AppCompatActivity
             udg.mirrorY();
             redraw();
         });
+    }
+
+    private void readColors()
+    {
+        colorSet = ResourcesCompat.getColor(getResources(), R.color.udgBlue, null);
+        colorUnset = ResourcesCompat.getColor(getResources(), R.color.udgGray, null);
     }
 
     private void createPowersOfTwo()
@@ -97,7 +108,7 @@ public class MainActivity extends AppCompatActivity
             {
                 var button = new Button(this);
 
-                button.setBackgroundColor(Color.GRAY);
+                button.setBackgroundColor(colorUnset);
 
                 var params = new TableRow.LayoutParams(
                         TableRow.LayoutParams.WRAP_CONTENT,
@@ -117,11 +128,11 @@ public class MainActivity extends AppCompatActivity
 
                     if (udg.getStatus(coordinate.row(), coordinate.column()))
                     {
-                        button.setBackgroundColor(Color.BLUE);
+                        button.setBackgroundColor(colorSet);
                     }
                     else
                     {
-                        button.setBackgroundColor(Color.GRAY);
+                        button.setBackgroundColor(colorUnset);
                     }
                 });
 
@@ -144,11 +155,11 @@ public class MainActivity extends AppCompatActivity
             {
                 if (udg.getStatus(i, j))
                 {
-                    buttons[i][j].setBackgroundColor(Color.BLUE);
+                    buttons[i][j].setBackgroundColor(colorSet);
                 }
                 else
                 {
-                    buttons[i][j].setBackgroundColor(Color.GRAY);
+                    buttons[i][j].setBackgroundColor(colorUnset);
                 }
             }
         }
