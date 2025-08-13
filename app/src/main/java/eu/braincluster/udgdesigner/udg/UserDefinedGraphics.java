@@ -113,4 +113,34 @@ public class UserDefinedGraphics
             }
         }
     }
+
+    public void rotateLeft()
+    {
+        var newMap = new boolean[NUM_ROWS][NUM_COLS];
+
+        for (int i = 0; i < NUM_ROWS; i++)
+        {
+            for (int j = 0; j < NUM_COLS; j++)
+            {
+                newMap[i][j] = characterMap[j][NUM_ROWS - i - 1];
+            }
+        }
+
+        characterMap = newMap;
+    }
+
+    public void rotateRight()
+    {
+        var newMap = new boolean[NUM_ROWS][NUM_COLS];
+
+        for (int i = 0; i < NUM_ROWS; i++)
+        {
+            for (int j = 0; j < NUM_COLS; j++)
+            {
+                newMap[i][j] = characterMap[NUM_COLS - j - 1][i];
+            }
+        }
+
+        characterMap = newMap;
+    }
 }

@@ -7,4 +7,6 @@
     <string name="mirror_x">Mirror X</string>
     <string name="mirror_y">Mirror Y</string>
     <string name="calc_data">Data</string>
+    <string name="rotate_left">Rotate Left</string>
+    <string name="rotate_right">Rotate Right</string>
 </resources>

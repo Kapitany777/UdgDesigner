@@ -62,6 +62,16 @@ public class MainActivity extends AppCompatActivity
             udg.mirrorY();
             redraw();
         });
+
+        binding.buttonRotateLeft.setOnClickListener(v -> {
+            udg.rotateLeft();
+            redraw();
+        });
+
+        binding.buttonRotateRight.setOnClickListener(v -> {
+            udg.rotateRight();
+            redraw();
+        });
     }
 
     private void readColors()
